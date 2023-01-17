@@ -17,6 +17,7 @@ from .config import Config
 
 app = Flask(__name__)
 # app.url_map.strict_slashes = False
+# test
 
 # Setup login manager
 login = LoginManager(app)
