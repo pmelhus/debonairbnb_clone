@@ -5,7 +5,7 @@ FROM python:3.9
 #
 # REACT_APP_BASE_URL -> Your deployment URL
 # replace iwth heroku deployed app
-ENV REACT_APP_BASE_URL=https://debonairbnb.herokuapp.com/
+ENV REACT_APP_BASE_URL=https://my-debonairbnb.herokuapp.com/
 
 # FLASK_APP -> entry point to your flask app
 ENV FLASK_APP=app
@@ -20,7 +20,7 @@ WORKDIR /var/www
 # Copy all the files from your repo to the working directory
 COPY . .
 
-# Copy the built react app (it's built for us) from the  
+# Copy the built react app (it's built for us) from the
 # /react-app/build/ directory into your flasks app/static directory
 COPY /react-app/build/* app/static/
 
