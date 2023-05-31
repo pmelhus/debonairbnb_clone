@@ -68,9 +68,9 @@ function App() {
 				<ProtectedRoute path="/users/:userId/estates" exact={true}>
 					<HostPage />
 				</ProtectedRoute>
-        <ProtectedRoute path="/" exact={true}>
+        <Route path="/" exact={true}>
           <HomePage />
-        </ProtectedRoute>
+        </Route>
         <ProtectedRoute path="/estates/:id" exact={true}>
           <EstatePage setCharterPayload={setCharterPayload} />
         </ProtectedRoute>

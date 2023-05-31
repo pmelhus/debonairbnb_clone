@@ -46,7 +46,7 @@ const CharterPage = () => {
 
     const estate = estates.estate_id;
 
-		// console.log(estate, 'here')
+
     let dispImg;
     if (charterEstate?.images.length) {
       dispImg = charterEstate?.images.reduce((img, accum) =>
@@ -55,7 +55,7 @@ const CharterPage = () => {
     }
     const dispImgURL = dispImg ? dispImg.url : null;
 
-  // console.log(charter)
+
 
   const serviceFees = charterEstate?.nightly_rate * lengthOfCharter * 0.30
   const cleaningFees = charterEstate?.nightly_rate * lengthOfCharter * 0.15
@@ -77,7 +77,7 @@ const CharterPage = () => {
 
   const handleConfirm = async (e) => {
     const payload = { user_id, estate_id, guest_num, start_date, end_date };
-    // console.log(payload)
+
     let createdCharter;
     try {
       createdCharter = await dispatch(addOneCharter(payload));
@@ -88,7 +88,7 @@ const CharterPage = () => {
     } catch (error) {
       if (error instanceof ValidationError) {
         setErrorMessages(error.errors);
-        // console.log(error.errors);
+
       }
     }
   };
@@ -104,7 +104,7 @@ const CharterPage = () => {
     //   } catch (error) {
     //     if (error instanceof ValidationError) {
     //       setErrorMessages(error.errors);
-    //       console.log(error.errors);
+
     //     }
     //   }
     // };
@@ -138,7 +138,7 @@ const CharterPage = () => {
     });
   }, []);
 
-// console.log(dispImg, '=============')
+
 
   return (
 		<>

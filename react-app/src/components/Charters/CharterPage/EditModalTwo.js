@@ -14,7 +14,7 @@ const EditFormTwo = ({
   start_date,
   end_date,
 }) => {
-  // console.log(typeof currCharter.start_date, '===================')
+
   let ciDate = new Date(currCharter.start_date.replace("GMT", ""));
   let coDate = new Date(currCharter.end_date.replace("GMT", ""));
   let today = new Date();
@@ -30,7 +30,7 @@ const EditFormTwo = ({
       charter.id !== parseInt(currCharter.id)
   );
 
-  // console.log(allChartersForEstate);
+
 
   let disabledDatesArray = [];
 
@@ -55,7 +55,7 @@ const EditFormTwo = ({
     },
   ]);
 
-  // console.log(typeof dateRange[0].startDate)
+
 
   const handleEdit = (e) => {
     e.preventDefault();
